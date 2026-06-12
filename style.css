@@ -56,33 +56,40 @@ html , body{
     font-size: 26px;
 }
 
-.hero{
-    height: 100%;
-    width: 100%;
-    padding: 11vw 10vw;
+.heading {
+    margin-top: 90px;
 }
-.hero h2{
-    font-size: 15px;
-    font-weight: 400;
-    letter-spacing: -.1vw;
+.heading h1{
+    font-size: 7.1vw;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 0.9;
+    opacity: 0.9;
+    margin-left: 30px;
 }
-.hero .heroText{
+.heading h4{
+    font-size: 14px;
+    margin-left: 32px;
+    opacity: 0.7;
+}
+
+.smoothScrool{
+    width: fit-content;
+    overflow: hidden;
+}
+.smoothElem{
+    transform: translateY(100%);
+}
+.blocktext{
+    width: fit-content;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    margin-top: -10px;
-
+    flex-direction: column;
+    align-items: end;
 }
-.hero .heroText h1{
-    color: transparent;
-    -webkit-text-stroke: 1px black ;
-    font-size: 7vw;
-    font-weight: 900;
-
-}
-.hero .heroText h1:hover{
-    color: black;
+.blocktext h5{
+    text-align: right;
+    text-transform: uppercase;
+    font-size:15px;
 }
 .home-footer{
     padding: 2.5vw 12vw;
@@ -105,14 +112,14 @@ html , body{
 .fheading h1{
     line-height: 1;
     font-size: 4vw;
-    font-weight: 400;
+    font-weight: 500;
     
 }
 
 .fheading h1:nth-child(2){
     color: transparent;
     -webkit-text-stroke: 1px black;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .fimages{
@@ -320,12 +327,25 @@ html , body{
 }
 
 .about{
-    padding-left: 30vw;
+    height: 90vh;
+    padding-left: 45vw;
     display: flex;
+    gap: 30px;
+    align-items: center;
 }
 .about img{
-    height: 100px;
-    width:100px;
+    height: 180px;
+    width:180px;
     object-fit: cover;
     border-radius: 50%;
+    
+}
+.about h1{
+    font-size: 17px;
+    color: gray;
+    text-transform: uppercase;
+}
+.about p{
+    width: 200px;
+   
 }

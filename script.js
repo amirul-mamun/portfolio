@@ -1,9 +1,5 @@
 Shery.mouseFollower();
 Shery.makeMagnet('.magnet');
-Shery.hoverWithMediaCircle(".hvr", {
-    videos: ["./0.mp4", "./2.mp4", "./3.mp4"]
-});
-
 
 gsap.to(".fleftelem", {
     scrollTrigger:{
@@ -36,3 +32,30 @@ Shery.imageEffect(".images", {
     }
 })
 
+
+function firstPageAnim() {
+  var tl = gsap.timeline();
+
+  tl.from(".nav", {
+    y: "-10",
+    opacity: 0,
+    duration: 1.5,
+    ease: Expo.easeInOut,
+  })
+    .to(".smoothElem", {
+      y: 0,
+      ease: Expo.easeInOut,
+      duration: 2,
+      delay: -1,
+      stagger: 0.2,
+    })
+    .from(".herofoter", {
+      y: -10,
+      opacity: 0,
+      duration: 1.5,
+      delay: -1,
+      ease: Expo.easeInOut,
+    });
+}
+
+firstPageAnim()
