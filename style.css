@@ -26,7 +26,7 @@ html , body{
     padding: 5px 13px;
 }
 .nav img{
-    height: 70px;
+    height: 75px;
 }
 
 
@@ -34,7 +34,7 @@ html , body{
     display: flex;
     gap: 14px;
     align-items: center;
-    font-size: 27px;
+    font-size: 29px;
 
 }
 .right a{
@@ -52,7 +52,7 @@ html , body{
 .menu h3{
     margin-top: -.5px;
     font-weight: lighter;
-    font-size: 44px;
+    font-size: 45px;
 }
 
 .heading {
@@ -261,7 +261,7 @@ html , body{
 .lhead h1:nth-child(2){
     margin-top: -.9vw;
 }
-.box{
+/* .box{
     padding-top: 5vw;
     display: flex;
     justify-content: space-between;
@@ -276,13 +276,13 @@ html , body{
 }
 .boxelem img{
     height: 127px;
-    width: 165px;
+    width: 195px;
     object-fit: cover;
     border-radius: 2px;
 }
 .boxelem2 img{
     height: 110px;
-    width: 165px;
+    width: 195px;
     object-fit: cover;
     border-radius: 2px;
 }
@@ -294,7 +294,7 @@ html , body{
     font-weight: 400;
     margin-right: 1px;
 
-}
+} */
 
 /* Fix Shery.js color inversion */
 .movercirc {
