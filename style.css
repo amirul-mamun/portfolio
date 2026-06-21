@@ -26,9 +26,7 @@ html , body{
     padding: 5px 13px;
 }
 .nav img{
-    height: 40px;
-
-
+    height: 70px;
 }
 
 
@@ -36,6 +34,7 @@ html , body{
     display: flex;
     gap: 14px;
     align-items: center;
+    font-size: 27px;
 
 }
 .right a{
@@ -53,14 +52,14 @@ html , body{
 .menu h3{
     margin-top: -.5px;
     font-weight: lighter;
-    font-size: 26px;
+    font-size: 44px;
 }
 
 .heading {
     margin-top: 90px;
 }
 .heading h1{
-    font-size: 7.1vw;
+    font-size: 7.4vw;
     text-transform: uppercase;
     font-weight: 800;
     line-height: 0.9;
@@ -68,7 +67,7 @@ html , body{
     margin-left: 30px;
 }
 .heading h4{
-    font-size: 14px;
+    font-size: 24px;
     margin-left: 32px;
     opacity: 0.7;
 }
@@ -182,7 +181,7 @@ html , body{
 }
 
 .btn button{
-    padding: 1.3vw 2.5vw;
+    padding: 1.2vw 2.8vw;
     border-radius: 100px;
     border: 1px solid rgb(236, 233, 233);
     background-color: white;
@@ -330,22 +329,24 @@ html , body{
     height: 90vh;
     padding-left: 45vw;
     display: flex;
-    gap: 30px;
+    gap: 40px;
     align-items: center;
 }
 .about img{
-    height: 180px;
-    width:180px;
+    height: 242px;
+    width:242px;
     object-fit: cover;
     border-radius: 50%;
+    margin-top: -20px;
     
 }
 .about h1{
-    font-size: 17px;
+    font-size: 20px;
     color: gray;
     text-transform: uppercase;
 }
 .about p{
-    width: 200px;
+    width: 250px;
+    font-size: 20px;
    
 }
