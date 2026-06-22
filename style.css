@@ -372,10 +372,9 @@ html , body{
     flex-direction: column;
     justify-content: space-evenly;
     padding: 0;
-    margin-left: -18px;
+    margin-left: -20px;
 }
 .footerright a{
     padding-left: 16px;
-    margin-left: 5px;
 }
 }
