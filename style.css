@@ -295,7 +295,7 @@ html , body{
     gap: 4px;
    }
    .menu h3{
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 400;
    }
    .heading h4{
@@ -376,5 +376,6 @@ html , body{
 }
 .footerright a{
     padding-left: 16px;
+    margin-left: 5px;
 }
 }
