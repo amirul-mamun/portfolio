@@ -374,7 +374,7 @@ html , body{
     padding: 0;
     margin-left: -22px;
 }
-.footerleft{
-    gap: 10px;
+.footerright a{
+    padding-left: 15px;
 }
 }
