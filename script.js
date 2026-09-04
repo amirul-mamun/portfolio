@@ -39,23 +39,36 @@ function firstPageAnim() {
   tl.from(".nav", {
     y: "-10",
     opacity: 0,
-    duration: 1.5,
+    duration: 1,
     ease: Expo.easeInOut,
   })
     .to(".smoothElem", {
       y: 0,
       ease: Expo.easeInOut,
       duration: 2,
-      delay: -1,
+      delay: -.5,
       stagger: 0.2,
     })
     .from(".herofoter", {
       y: -10,
       opacity: 0,
       duration: 1.5,
-      delay: -1,
+      delay: -.5,
       ease: Expo.easeInOut,
     });
 }
 
 firstPageAnim()
+
+let time = document.querySelector('#time')
+function updateTime(){
+let now = new Date();
+let hours =  now.getHours() >= 12 ? now.getHours() - 12 : now.getHours();
+let minutes = now.getMinutes();
+let AmPm = now.getHours() >= 12 ? 'PM' : 'AM';
+
+time.innerHTML = ` ${hours}:${minutes} ${AmPm} EST`;
+}
+updateTime()
+
+
