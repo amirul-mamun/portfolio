@@ -1,74 +1,61 @@
-Shery.mouseFollower();
-Shery.makeMagnet('.magnet');
+const menuToggle = document.querySelector('.menu-toggle');
+const siteNav = document.querySelector('.site-nav');
+const form = document.querySelector('.contact-form');
+const formStatus = document.querySelector('.form-status');
+const heroVideo = document.querySelector('#hero-intro');
+const videoToggle = document.querySelector('.video-toggle');
 
-gsap.to(".fleftelem", {
-    scrollTrigger:{
-        trigger:".fimages",
-        pin: true,
-        star: "top top",
-        end: "bottom bottom",
-        endTrigger: ".last",
-        scrub:1
-    },
-    y:"-300%",
-    ease:Power1
-})
+menuToggle?.addEventListener('click', () => {
+  const isOpen = siteNav.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', String(isOpen));
+  menuToggle.querySelector('.menu-icon').textContent = isOpen ? '×' : '+';
+});
 
-let sections = document.querySelectorAll('.fleftelem')
-Shery.imageEffect(".images", {
-    style:5,
-    config:{onMouse : {value : 1}},
-    slideStyle: (setScroll) =>{
-         sections.forEach(function(section , index){
-            ScrollTrigger.create({
-                trigger:section,
-                start: "top top",
-                scrub: 1,
-                onUpdate: function(prog){
-                    setScroll(prog.progress+index)
-                }
-            })
-         })
-    }
-})
+siteNav?.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => {
+    siteNav.classList.remove('open');
+    menuToggle?.setAttribute('aria-expanded', 'false');
+    const icon = menuToggle?.querySelector('.menu-icon');
+    if (icon) icon.textContent = '+';
+  });
+});
 
+form?.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const name = form.elements.name.value.trim();
+  const message = form.elements.message.value.trim();
+  const text = `Hello Mujahid,\n\nName: ${name}\nMessage: ${message}`;
+  window.location.href = `https://api.whatsapp.com/send?phone=8801321992076&text=${encodeURIComponent(text)}`;
+});
 
-function firstPageAnim() {
-  var tl = gsap.timeline();
+document.querySelector('#year').textContent = new Date().getFullYear();
 
-  tl.from(".nav", {
-    y: "-10",
-    opacity: 0,
-    duration: 1,
-    ease: Expo.easeInOut,
-  })
-    .to(".smoothElem", {
-      y: 0,
-      ease: Expo.easeInOut,
-      duration: 2,
-      delay: -.5,
-      stagger: 0.2,
-    })
-    .from(".herofoter", {
-      y: -10,
-      opacity: 0,
-      duration: 1.5,
-      delay: -.5,
-      ease: Expo.easeInOut,
+videoToggle?.addEventListener('click', () => {
+  if (!heroVideo) return;
+
+  if (heroVideo.paused) {
+    heroVideo.muted = false;
+    heroVideo.play().catch(() => {
+      heroVideo.muted = true;
+      heroVideo.play().catch(() => {});
     });
-}
+    videoToggle.setAttribute('aria-label', 'Pause introduction video');
+    videoToggle.setAttribute('aria-pressed', 'true');
+    videoToggle.innerHTML = '<span class="pause-icon">Ⅱ</span>';
+    return;
+  }
 
-firstPageAnim()
+  heroVideo.pause();
+  videoToggle.setAttribute('aria-label', 'Play introduction video');
+  videoToggle.setAttribute('aria-pressed', 'false');
+  videoToggle.innerHTML = '<span class="play-icon">▶</span>';
+});
 
-let time = document.querySelector('#time')
-function updateTime(){
-let now = new Date();
-let hours =  now.getHours() >= 12 ? now.getHours() - 12 : now.getHours();
-let minutes = now.getMinutes();
-let AmPm = now.getHours() >= 12 ? 'PM' : 'AM';
-
-time.innerHTML = ` ${hours}:${minutes} ${AmPm} EST`;
-}
-updateTime()
-
-
+setTimeout(() => {
+  if (!heroVideo) return;
+  heroVideo.muted = false;
+  heroVideo.play().catch(() => {
+    heroVideo.muted = true;
+    heroVideo.play().catch(() => {});
+  });
+}, 2000);
