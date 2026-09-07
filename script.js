@@ -5,6 +5,12 @@ const formStatus = document.querySelector('.form-status');
 const heroVideo = document.querySelector('#hero-intro');
 const videoToggle = document.querySelector('.video-toggle');
 
+document.querySelectorAll('.project-image').forEach((image) => {
+  const showImage = () => image.classList.add('is-loaded');
+  if (image.complete && image.naturalWidth > 0) showImage();
+  else image.addEventListener('load', showImage, { once: true });
+});
+
 menuToggle?.addEventListener('click', () => {
   const isOpen = siteNav.classList.toggle('open');
   menuToggle.setAttribute('aria-expanded', String(isOpen));
