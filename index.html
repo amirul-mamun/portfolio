@@ -3,107 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-  href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
-  rel="stylesheet"/>
-  <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="loco.css">
-  <link rel="icon" href="https://thf.bing.com/th/id/OIP.Oiu7aMyQphHYiw08TzUVKgHaHa?w=182&h=182&c=7&r=0&o=7&cb=thfc1falcon2&pid=1.7&rm=3">
-  
-
-
-  <title>Amirul Islam</title>
+    <meta name="description" content="Mujahid is a frontend and WordPress developer building thoughtful digital experiences.">
+    <link rel="icon" href="assets/logo-favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Amirul Islam | Frontend & WordPress Developer</title>
 </head>
 <body>
-     <div class="main">
-        <div class="home">
-            <div class="nav">
-                <img class="magnet" src="high-resolution-color-logo-removebg-preview.png" alt="">
-                <div class="right">
-                     <a href="#">our showreel</a>
-                     <div class="menu">
-                        <a href="#">menu</a>
-                        <h3 class="magnet" >=</h3>
-                     </div>
-                </div>
+    <header class="site-header">
+        <a class="brand" href="#home" aria-label="Mujahid home"><span>&lt;/&gt;</span> Amirul Islam<span class="brand-dot">.</span></a>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu <span class="menu-icon">+</span></button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+            <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Work</a><a href="#contact" class="nav-contact">Let's talk <span>↗</span></a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero section-wrap">
+            <div class="hero-copy reveal">
+                <p class="eyebrow"><span class="status-dot"></span> Available for freelance work</p>
+                <p class="greeting">Hi, I'm Amirul Islam.</p>
+                <h1>Frontend &amp; <em>WordPress</em> Developer<span class="blue-mark">.</span></h1>
+                <p class="hero-text">A 21-year-old computer science engineering student passionate about building clean, responsive, and user-centric web experiences.</p>
+                <div class="hero-actions"><a class="button button-primary" href="#projects">View my work <span>↗</span></a><a class="button button-ghost" href="assets/Mujahid-resume.pdf" download>Download resume <span>↓</span></a></div>
+                <div class="social-row"><span>Find me on</span><a href="https://github.com/amirul-mamun" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/amirul-islam-8041a4326/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div>
             </div>
-
-            <div class="heading">
-                <div class="smoothScrool">
-                    <h4 class="smoothElem" >Pixels With Purpose</h4>
-
-                </div>
-                
-                <div class="blocktext">
-
-                   <div class="smoothScrool">
-                      <h1  class="smoothElem" id="second-h1">Design Develop Deliver</h1>
-                    </div>
-
-                </div>         
-            <div class="home-footer">
-                <p>
-                    Independent digital creator with solid design and development expertise. I build ready‑made websites, engaging mobile applications, and tailored online business solutions
-                </p>
+            <div class="hero-video reveal delay-1">
+                <div class="video-orbit"></div><div class="video-screen"><video id="hero-intro" class="intro-video" poster="assets/video-thumbs.png" playsinline muted autoplay preload="auto"><source src="assets/hero-video.mp4" type="video/mp4">Your browser does not support the video tag.</video><button class="video-toggle" type="button" aria-label="Pause introduction video" aria-pressed="true"><span class="pause-icon">Ⅱ</span></button><div class="video-label">INTRO / 00:45</div><div class="video-caption">A little about<br><strong>what I do.</strong></div></div>
+                <span class="floating-code code-one">&lt;hello /&gt;</span><span class="floating-code code-two">{ creative: true }</span>
             </div>
-        </div>
-    
-    <div class="btn">
-                <button class="magnet" >view all prjects</button>
-            </div>
-        </div>
-        
+        </section>
 
+        <section id="about" class="content-section section-wrap">
+            <div class="section-heading"><span>01 / ABOUT</span><h2>More than just<br><em>code.</em></h2></div>
+            <div class="about-content"><div class="about-photo"><img src="assets/photo_amirul_islam.png" alt="Mujahid smiling"></div><div class="about-text"><p class="lead">I blend a strong eye for UI/UX with technical programming skills to bring ideas to life.</p><p>I am currently pursuing my Diploma in Engineering in Computer Technology. My journey started with a fascination for how things look and function on the web. With a background in Humanities, I bring a human-centered perspective to every interface.</p><div class="timeline"><div><strong>2023 — Present</strong><span>Diploma in Computer Technology</span></div><div><strong>2024 — Present</strong><span>Freelance Web &amp; Graphic Design</span></div><div><strong>Next chapter</strong><span>Building for the web, at scale</span></div></div></div></div>
+        </section>
 
+        <section id="skills" class="content-section skills-section section-wrap"><div class="section-heading"><span>02 / SKILLS</span><h2>My technical<br><em>arsenal.</em></h2></div><div class="skills-grid"><article class="skill-card"><span class="card-number">01</span><h3>Languages</h3><div class="tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Node.js</span><span>MongoDB</span><span>PHP / Basic</span></div></article><article class="skill-card accent-card"><span class="card-number">02</span><h3>Frameworks &amp; Libraries</h3><div class="tags"><span>React.js</span><span>Tailwind CSS</span><span>Bootstrap</span></div></article><article class="skill-card"><span class="card-number">03</span><h3>CMS &amp; Builders</h3><div class="tags"><span>WordPress</span><span>Custom Themes</span><span>Elementor</span><span>Webflow</span><span>Framer</span></div></article><article class="skill-card"><span class="card-number">04</span><h3>Tools &amp; Other</h3><div class="tags"><span>Git / GitHub</span><span>MySQL</span><span>Figma</span><span>VS Code</span><span>UI / UX</span><span>AI workflows</span></div></article></div></section>
 
-     <div class="about">
-            <img src="WhatsApp Image 2026-06-06 at 16.12.45.jpeg" alt="">
-            
-            <div class="aboutItem">
+        <section id="projects" class="content-section projects-section section-wrap"><div class="section-heading project-heading"><span>03 / SELECTED WORK</span><h2>Things I've<br><em>built.</em></h2><p>Some experiments, client work, and products I am proud to have shaped.</p></div><div class="project-grid"><article class="project-card project-wlist"><div class="project-visual"><span class="visual-logo">w<span>list</span></span><span class="visual-note">VOCABULARY<br>BUILDER</span></div><div class="project-info"><span class="project-type">Chrome Extension / 2025</span><h3>Wlist</h3><p>A focused vocabulary builder designed to make exam preparation feel simple and rewarding.</p><div class="project-bottom"><div class="mini-tags"><span>JavaScript</span><span>Chrome API</span></div><a href="#contact">View project ↗</a></div></div></article><article class="project-card project-palace"><div class="project-visual"><span class="visual-note">SOUTHVIEW<br>PALACE</span><span class="visual-sun"></span></div><div class="project-info"><span class="project-type">Real Estate / 2024</span><h3>Southview Palace</h3><p>A visually striking promotional site with a warm, confident identity for a modern property.</p><div class="project-bottom"><div class="mini-tags"><span>WordPress</span><span>Figma</span></div><a href="#contact">View project ↗</a></div></div></article><article class="project-card project-blog"><div class="project-visual"><span class="visual-window">&lt;blog /&gt;</span><span class="visual-grid"></span></div><div class="project-info"><span class="project-type">Personal Product / 2025</span><h3>Dynamic Blog</h3><p>A high-speed personal blog built from scratch with a clean reading experience.</p><div class="project-bottom"><div class="mini-tags"><span>React</span><span>Tailwind</span></div><a href="#contact">View project ↗</a></div></div></article></div></section>
 
-                <h1>(About Me)</h1>
-                <p>I'm a creative developer passionate about turning ideas into digital experiences. With expertise in design and development, I build websites, apps, and products that bring brands to life.</p>
-                 <div class="btn" id="about-btn"><button class="magnet">Let's Talk</button></div>
-            </div>
-
-     </div>
-
-      <div class="footer">
-            <div class="footerleft"> 
-
-              <h5>2026 &copy;</h5> 
-              <h5 id="time"></h5>      
-
-           </div>
-            
-            <div class="footerright">
-               <a href="https://www.linkedin.com/in/amirul-islam-8041a4326/" target="_blank">Linkedin</a> <a href="https://www.facebook.com/amirul.islam.mamun.479258" target="_blank">Facebook</a> <a href="https://leetcode.com/u/amirulislam12/" target="_blank">LeetCode</a> <a href="https://github.com/amirul-mamun" target="_blank">GitHub</a>
-            </div>
-
-        </div>
-    
-    </div>
-    <!--  Gsap is needed for Basic Effects -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
-        integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-
-<!-- Scroll Trigger is needed for Scroll Effects -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-<!-- Three.js is needed for 3d Effects -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
-
-<script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script> <!-- Recommended -->
-         
-
-    
-        <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script> -->
-
-<script src="script.js"></script>
-    
+        <section id="contact" class="contact-section section-wrap"><div class="contact-copy"><span class="section-label">04 / CONTACT</span><h2>Let's build<br>something <em>great.</em></h2><p>Have a question, a project idea, or just want to say hi? I'll try my best to get back to you.</p><div class="direct-info"><a href="mailto:amirulislam21354@gmail.com">amirulislam21354@gmail.com
+</a><a href="https://wa.me/8801321992076">WhatsApp ↗</a><span>Uttara, Dhaka, Bangladesh</span></div></div><form class="contact-form"><label>Name<input type="text" name="name" placeholder="Your name" required></label><label>Message<textarea name="message" rows="5" placeholder="Tell me a little about your project..." required></textarea></label><button class="button button-primary" type="submit">Send message <span>↗</span></button><p class="form-status" role="status"></p></form></section>
+    </main>
+    <footer class="site-footer"><span>© <span id="year">2026</span> Designed &amp; built by Amirul Islam</span><div><a href="https://github.com/amirul-mamun">GitHub ↗</a><a href="https://www.linkedin.com/in/amirul-islam-8041a4326/">LinkedIn ↗</a></div></footer>
+    <script src="script.js"></script>
 </body>
 </html>
