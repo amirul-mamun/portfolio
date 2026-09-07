@@ -28,9 +28,13 @@ siteNav?.querySelectorAll('a').forEach((link) => {
 
 form?.addEventListener('submit', (event) => {
   event.preventDefault();
+  if (!form.reportValidity()) return;
+
   const name = form.elements.name.value.trim();
   const message = form.elements.message.value.trim();
   const text = `Hello Mujahid,\n\nName: ${name}\nMessage: ${message}`;
+
+  if (formStatus) formStatus.textContent = 'Opening WhatsApp…';
   window.location.href = `https://api.whatsapp.com/send?phone=8801321992076&text=${encodeURIComponent(text)}`;
 });
 
