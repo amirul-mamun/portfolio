@@ -1,0 +1,89 @@
+/* Project cards */
+.project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    align-items: stretch;
+    gap: 24px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-visual {
+    min-height: 240px;
+    isolation: isolate;
+}
+
+.project-placeholder,
+.project-image {
+    position: absolute;
+    inset: 0;
+}
+
+.project-placeholder {
+    z-index: 1;
+}
+
+.project-image {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity .35s ease, transform .45s ease;
+}
+
+.project-image.is-loaded {
+    opacity: 1;
+}
+
+.project-card:hover .project-image.is-loaded {
+    transform: scale(1.04);
+}
+
+.project-info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.project-info p {
+    flex: 1;
+}
+
+.project-bottom {
+    align-items: center;
+    gap: 16px;
+}
+
+.project-bottom a {
+    white-space: nowrap;
+}
+
+.project-bottom a:hover {
+    color: var(--blue);
+}
+
+.project-spotify .project-visual {
+    background: linear-gradient(135deg, #0b3327, #1ed760);
+}
+
+.project-thikana .project-visual {
+    background: linear-gradient(135deg, #d7ba95, #866e5a);
+}
+
+.project-web .project-visual {
+    background: linear-gradient(135deg, #17243a, #294d70);
+}
+
+@media (max-width: 520px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-visual {
+        min-height: 215px;
+    }
+}
